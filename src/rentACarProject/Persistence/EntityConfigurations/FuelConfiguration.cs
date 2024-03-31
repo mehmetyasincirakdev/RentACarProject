@@ -17,6 +17,7 @@ public class FuelConfiguration : IEntityTypeConfiguration<Fuel>
         builder.Property(f => f.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasMany(b => b.Models);
+
         builder.HasQueryFilter(f => !f.DeletedDate.HasValue);
     }
 }

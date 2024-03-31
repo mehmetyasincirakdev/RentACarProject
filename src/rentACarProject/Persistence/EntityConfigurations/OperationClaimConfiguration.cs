@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NArchitecture.Core.Security.Constants;
 using Application.Features.Brands.Constants;
+using Application.Features.Fuels.Constants;
+using Application.Features.Models.Constants;
 
 namespace Persistence.EntityConfigurations;
 
@@ -108,6 +110,48 @@ public class OperationClaimConfiguration : IEntityTypeConfiguration<OperationCla
                 new() { Id = ++lastId, Name = BrandsOperationClaims.Create },
                 new() { Id = ++lastId, Name = BrandsOperationClaims.Update },
                 new() { Id = ++lastId, Name = BrandsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Fuels
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Read },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Write },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Create },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Update },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Fuels
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Read },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Write },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Create },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Update },
+                new() { Id = ++lastId, Name = FuelsOperationClaims.Delete },
+            ]
+        );
+        #endregion
+        
+        
+        #region Models
+        featureOperationClaims.AddRange(
+            [
+                new() { Id = ++lastId, Name = ModelsOperationClaims.Admin },
+                new() { Id = ++lastId, Name = ModelsOperationClaims.Read },
+                new() { Id = ++lastId, Name = ModelsOperationClaims.Write },
+                new() { Id = ++lastId, Name = ModelsOperationClaims.Create },
+                new() { Id = ++lastId, Name = ModelsOperationClaims.Update },
+                new() { Id = ++lastId, Name = ModelsOperationClaims.Delete },
             ]
         );
         #endregion

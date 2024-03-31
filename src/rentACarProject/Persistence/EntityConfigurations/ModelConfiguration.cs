@@ -22,6 +22,7 @@ public class ModelConfiguration : IEntityTypeConfiguration<Model>
 
         builder.HasOne(b => b.Brand);
         builder.HasOne(b => b.Fuel);
+
         builder.HasQueryFilter(m => !m.DeletedDate.HasValue);
     }
 }
